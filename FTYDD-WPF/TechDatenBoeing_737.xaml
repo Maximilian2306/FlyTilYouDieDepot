@@ -1,0 +1,72 @@
+﻿<Window x:Class="FTYDD_WPF.TechDatenBoeing_737"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FTYDD_WPF"
+        mc:Ignorable="d"
+        Title="TechDatenBoeing_737" Height="450" Width="800">
+    <Grid>
+        <Canvas Width="800" Height="450">
+            <TextBlock TextWrapping="Wrap" FontSize="14" Canvas.Left="10" Canvas.Top="10" Canvas.Right="20" Width="770" Height="420">Die Boeing 737 ist eine Familie von zweistrahligen, schmalrumpfigen Passagierflugzeugen, die von Boeing Commercial Airplanes entwickelt und hergestellt wurde. Hier sind einige technische Daten zur Boeing 737: 
+                <LineBreak/>
+                <LineBreak/>
+                Größe: Die genauen Abmessungen variieren je nach Modell und Konfiguration, aber typischerweise hat die Boeing 737 eine Länge von etwa 28 bis 44 Metern, eine Spannweite von etwa 34 bis 35 Metern und eine Höhe von etwa 12 bis 13 Metern.
+                <LineBreak/>
+                <LineBreak/>
+                Kapazität: Die maximale Passagierkapazität variiert je nach Modell und Konfiguration. Die 737 MAX 10, zum Beispiel, kann bis zu etwa 230 Passagiere befördern.
+                <LineBreak/>
+                <LineBreak/>
+                Reichweite: Die Reichweite variiert ebenfalls je nach Modell und Konfiguration. Die 737 MAX 10 hat eine maximale Reichweite von etwa 3.300 bis 3.700 Seemeilen (ca. 6.100 bis 6.850 Kilometer).
+                <LineBreak/>
+                <LineBreak/>
+                Triebwerke: Die Boeing 737 wird von verschiedenen Triebwerksherstellern wie CFM International und Pratt u. Whitney angetrieben, je nach Modell und Kunde. Die neueste 737 MAX-Serie ist mit CFM LEAP-1B-Triebwerken ausgestattet.
+                <LineBreak/>
+                <LineBreak/>
+                Höchstgeschwindigkeit: Die Höchstgeschwindigkeit der Boeing 737 liegt typischerweise bei etwa Mach 0,82 bis 0,85 (ca. 530 bis 560 Knoten oder 980 bis 1.040 km/h).</TextBlock>
+
+            <Button Content="Ok" Width="60" Height="25" Background="DimGray" Foreground="GhostWhite" FontSize="15" Canvas.Left="10" Canvas.Top="360">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Blue"/>
+                        <Setter Property="Foreground" Value="White"/>
+
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="Button.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                        Storyboard.TargetProperty="Width"
+                        To="70"
+                        Duration="0:0:0.2"/>
+                                        <DoubleAnimation
+                        Storyboard.TargetProperty="Height"
+                        To="30"
+                        Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Button.MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                        Storyboard.TargetProperty="Width"
+                        To="60"
+                        Duration="0:0:0.2"/>
+                                        <DoubleAnimation
+                        Storyboard.TargetProperty="Height"
+                        To="25"
+                        Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+        </Canvas>
+        
+    </Grid>
+</Window>

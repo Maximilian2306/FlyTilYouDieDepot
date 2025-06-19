@@ -1,0 +1,103 @@
+﻿<Page x:Class="FTYDD_WPF.Lockheed_Martin_F_35"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FTYDD_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="1300" d:DesignWidth="1500"
+      Title="Lockheed_Martin_F_35">
+
+    <Page.Background>
+        <ImageBrush ImageSource="/Images/Hintergrund_1.jpg"/>
+    </Page.Background>
+    
+    <Grid>
+        <ScrollViewer CanContentScroll="True">
+            <Canvas Height="1300" Width="1500">
+
+
+                <Label Width="900" Height="7500" Background="CornflowerBlue" BorderBrush="Transparent" BorderThickness="0" Canvas.Left="300" Canvas.Top="0" Canvas.Right="300" Canvas.Bottom="0"></Label>
+
+                <Image  Source="/Images/Lockheed_Martin_F-35_Lightning.jpg" Width="550" Height="350" Canvas.Left="480" Canvas.Top="205"></Image>
+                <Image Source="/Images/Kampfjet_Daten.png" Width="400" Height="260" Canvas.Left="60" Canvas.Top="250"></Image>
+                <Image Source="/Images/Kampfjet_Motor.jpg" Width="350" Height="285" Canvas.Right="80" Canvas.Top="240"></Image>
+
+                <!-- <Label Content="Boeing 737" FontSize="60" FontStyle="Oblique" Width="320" FontWeight="SemiBold" Foreground="FloralWhite" Canvas.Left="590" Canvas.Top="60" ></Label>-->
+
+                <Label x:Name="titleLabel" 
+           Content="Lockheed Martin F-35" 
+           FontSize="80" 
+            FontWeight="Bold" 
+            Foreground="White"
+             Canvas.Top="35" Canvas.Left="335">
+                    <Label.Effect>
+                        <DropShadowEffect Color="Black" Direction="320" ShadowDepth="3" BlurRadius="5"/>
+                    </Label.Effect>
+                    <Label.Triggers>
+                        <!-- Hover-Effekt -->
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="AntiqueWhite" Duration="0:0:0.2" Storyboard.TargetProperty="(Label.Foreground).(SolidColorBrush.Color)"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="White" Duration="0:0:0.2" Storyboard.TargetProperty="(Label.Foreground).(SolidColorBrush.Color)"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+
+                        <!-- Animation beim Laden -->
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Label.Triggers>
+                </Label>
+
+
+
+                <Label Canvas.Top="600" Canvas.Left="400" Foreground="White" FontSize="23" FontWeight="SemiBold">Wählen Sie den zu verbauenden Motor:</Label>
+                <RadioButton x:Name="CF6_Motor" IsChecked="True" GroupName="Motor" Cursor="Hand" Canvas.Top="680" Canvas.Left="500" Foreground="White" FontSize="13" FontWeight="SemiBold">General Electric CF6</RadioButton>
+                <RadioButton x:Name="Trent_Motor" GroupName="Motor" Cursor="Hand" Canvas.Top="720" Canvas.Left="500" Foreground="White" FontSize="13" FontWeight="SemiBold">Rolls-Royce Trent</RadioButton>
+                <RadioButton x:Name="PW1000G_Motor" GroupName="Motor" Cursor="Hand" Canvas.Top="760" Canvas.Left="500" Foreground="White" FontSize="13" FontWeight="SemiBold">Pratt u. Whitney PW1000G</RadioButton>
+
+                <Label Canvas.Top="860" Canvas.Left="400" Foreground="White" FontSize="23" FontWeight="SemiBold">Möchten Sie in ihrem künftigen Flugzeug Waffen verbauen?</Label>
+                <RadioButton GroupName="Bewaffnung" Cursor="Hand" Canvas.Top="940" Canvas.Left="500" Foreground="White" FontSize="13" FontWeight="SemiBold">Ja</RadioButton>
+                <RadioButton GroupName="Bewaffnung" Cursor="Hand" Canvas.Top="980" Canvas.Left="500" Foreground="White" FontSize="13" FontWeight="SemiBold">Nein (Schlechte Wahl)</RadioButton>
+
+                <Button x:Name="Ausw_BesT" Click="Button_Click" Cursor="Hand" Width="200" Height="35" FontSize="20" Canvas.Top="1120" Canvas.Left="560">Auswahl bestätigen</Button>
+
+                <Button x:Name="Techn_Daten" Click="Techn_Daten_Click" Cursor="Hand" Width="150" Height="35" FontSize="20" FontWeight="Normal" Canvas.Left="400" Canvas.Top="1120" >Techn. Daten</Button>
+
+                <Button x:Name="GoBack_button" Content="  > " Cursor="Hand" Click="GoBack_button_Click" FontSize="30" Background="Black" Foreground="White" BorderBrush="Black" BorderThickness="0" Canvas.Left="-10" Canvas.Top="0"/>
+
+
+
+                <Expander x:Name="expander" Canvas.Right="200" Canvas.Top="650" Cursor="Hand" >
+                    <Canvas>
+                        <Button x:Name="ueber_uns" Click="ueber_uns_Click" Canvas.Top="0" Canvas.Right="20" Background="Transparent" Width="60" Height="20" BorderBrush="Transparent" Content="Über uns" Foreground="White"></Button>
+                        <Button x:Name="home" Click="home_Click" Canvas.Right="20" Canvas.Top="20" Background="Transparent" Width="60" Height="20" BorderBrush="Transparent" Content="Home" Foreground="White"></Button>
+                        <Button x:Name="info" Click="info_Click" Canvas.Right="20" Canvas.Top="40" Background="Transparent" Width="60" Height="20" BorderBrush="Transparent" Content="Info" Foreground="White"></Button>
+                        <Button x:Name="uebersicht" Click="uebersicht_Click" Canvas.Right="20" Canvas.Top="60" Background="Transparent" Width="60" Height="20" BorderBrush="Transparent" Content="Übersicht" Foreground="White"></Button>
+                        <Button x:Name="warenkorb" Click="warenkorb_Click" Canvas.Right="20" Canvas.Top="80" Background="Transparent" Width="65" Height="20" BorderBrush="Transparent" Content="Warenkorb" Foreground="White"></Button>
+                    </Canvas>
+                </Expander>
+
+
+
+
+
+
+            </Canvas>
+        </ScrollViewer>
+    </Grid>
+</Page>

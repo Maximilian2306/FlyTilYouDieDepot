@@ -1,0 +1,53 @@
+﻿<Page x:Class="FTYDD_WPF.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FTYDD_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1500"
+      Title="LoginPage">
+
+    <Page.Background>
+        <ImageBrush ImageSource="/Images/Hintergrund_1.jpg"/>
+    </Page.Background>
+
+
+    <Grid>
+        <ScrollViewer CanContentScroll="True">
+            <Canvas Height="750" Width="1500">
+
+                <Label Canvas.Left="570" Canvas.Right="560" Canvas.Top="50" Width="380" Height="200" FontSize="120" FontFamily="Ariel"
+                       FontWeight="Bold" Foreground="PaleVioletRed" Background="Transparent" Content="Log In"></Label>
+
+                <Label Canvas.Left="580" Canvas.Top="240" FontSize="30" FontFamily="Ariel" Foreground="White">E-Mail:</Label>
+                <TextBox x:Name="txtBox_email" Width="400" Height="35" Canvas.Left="585" Canvas.Top="290" FontSize="20"></TextBox>
+
+                <Label Canvas.Left="580" Canvas.Top="370" FontSize="30" FontFamily="Ariel"  Foreground="White">Passwort:</Label>
+                <PasswordBox x:Name="txtBox_passwort" Width="400" Height="35" Canvas.Left="585" Canvas.Top="420" FontSize="20"></PasswordBox>
+
+                <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" Canvas.Left="585" Canvas.Top="530" 
+                          Cursor="Hand" FontSize="15" Foreground="White" Height="50" Width="213" HorizontalAlignment="Center" VerticalAlignment="Top">Ich akzeptiere die AGB</CheckBox>
+
+                <Button x:Name="button_reg" Click="button_reg_Click" IsEnabled="False" Cursor="Hand" Canvas.Left="585" Canvas.Top="620"
+                        FontSize="20" Height="45" Width="140">Registrieren</Button>
+
+                <Button x:Name="button_anm" Click="button_anm_Click" IsEnabled="False" Cursor="Hand" Canvas.Left="740" Canvas.Top="620"
+                        FontSize="20" Height="45" Width="140">Anmelden</Button>
+
+
+                <Button Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="160" Height="20" FontSize="16"
+                        FontFamily="Ariel" Canvas.Left="580" Canvas.Top="680" Foreground="DimGray">
+                    <TextBlock Background="Transparent"  Width="150" Height="20" FontSize="16"
+                        FontFamily="Ariel" Canvas.Left="585" Canvas.Top="680" Foreground="DimGray" TextDecorations="Underline">
+                        Passwort Vergessen ?
+                    </TextBlock>
+                </Button>
+
+
+
+
+            </Canvas>
+        </ScrollViewer>
+    </Grid>
+</Page>

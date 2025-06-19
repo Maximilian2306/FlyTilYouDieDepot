@@ -1,0 +1,79 @@
+﻿<Page x:Class="FTYDD_WPF.Tests3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FTYDD_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Tests3">
+
+    <Grid>
+        <StackPanel Margin="20">
+            <Label x:Name="Name_lbl" Margin="10,10,0,5" FontSize="15" Content="{Binding ElementName=TextBox, Path=Text}" ></Label>
+            <TextBox x:Name="TextBox" Margin="10" Width="200" HorizontalAlignment="Left" ></TextBox>
+            <Button x:Name="Add_button" Click="Add_button_Click" Margin="10" Content="Add Name" Width="100" HorizontalAlignment="Left"></Button>
+            <Button x:Name="Info_button" Click="Info_button_Click" Margin="10,0,0,0" Content="Info" Width="100" HorizontalAlignment="Left" ></Button>
+            
+        </StackPanel>
+
+        <Label x:Name="Acc_lbl" Margin="20" FontSize="10" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+
+
+        <Button Content="Test" Width="60" Height="25" Background="Gray" Foreground="White" FontSize="15">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Blue"/>
+                    <Setter Property="Foreground" Value="White"/>
+
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                Storyboard.TargetProperty="Width"
+                                To="70"
+                                Duration="0:0:0.2"/>
+                                    <DoubleAnimation
+                                Storyboard.TargetProperty="Height"
+                                To="30"
+                                Duration="0:0:0.2" />
+                                    </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                Storyboard.TargetProperty="Width"
+                                To="60"
+                                Duration="0:0:0.2"/>
+                                    <DoubleAnimation
+                                Storyboard.TargetProperty="Height"
+                                To="25"
+                                Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+
+        <Expander VerticalAlignment="Center" HorizontalAlignment="Right" IsExpanded="False">
+            <StackPanel>
+                <Button >Wie bitttttte!!!!</Button>
+                <Button >Wie bitttttte!!!!</Button>
+                <Button >Wie bitttttte!!!!</Button>
+                <Button >Wie bitttttte!!!!</Button>
+                <Button >Wie bitttttte!!!!</Button>
+            </StackPanel>
+        </Expander>
+
+        <TextBlock x:Name="ActualTime" FontSize="8" FontWeight="Bold" FontStyle="Oblique" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            
+        </TextBlock>
+        
+    </Grid>
+</Page>

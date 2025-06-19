@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>FTYDD_WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Benes_Daddy.jpg" />
+    <None Remove="Images\Boeing_737.png" />
+    <None Remove="Images\Boeing_737_architecture.jpg" />
+    <None Remove="Images\Boeing_737_inside.jpg" />
+    <None Remove="Images\Eclipse Aviation Eclipse 550.jpg" />
+    <None Remove="Images\Gulfstream_G700-Floorplan.jpg" />
+    <None Remove="Images\Gulfstream_G700.jpg" />
+    <None Remove="Images\Gulfstream_G700_inside.jpg" />
+    <None Remove="Images\Hintergrund_0.jpg" />
+    <None Remove="Images\Hintergrund_1.jpg" />
+    <None Remove="Images\Hintergrund_2.jpg" />
+    <None Remove="Images\Hintergrund_3.png" />
+    <None Remove="Images\Hintergrund_4.jpg" />
+    <None Remove="Images\Hintergrund_5.jpg" />
+    <None Remove="Images\Hintergrund_6.jpg" />
+    <None Remove="Images\Kampfjet_Daten.png" />
+    <None Remove="Images\Kampfjet_Motor.jpg" />
+    <None Remove="Images\Lockheed_Martin_F-35_Lightning.jpg" />
+    <None Remove="Images\PrivateJets_Hintergrund.jpg" />
+    <None Remove="Images\PrivateJets_Hintergrund1.jpg" />
+    <None Remove="Images\PrivateJets_Hintergrund3.png" />
+    <None Remove="Images\PrivateJets_Hintergund2.jpg" />
+    <None Remove="Images\Top-Arbeitgeber-1.jpg" />
+    <None Remove="Images\wfk-Siegel-3000.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlyTilYouDieDepot\FlyTilYouDieDepot.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Benes_Daddy.jpg" />
+    <Resource Include="Images\Boeing_737.png" />
+    <Resource Include="Images\Boeing_737_architecture.jpg" />
+    <Resource Include="Images\Boeing_737_inside.jpg" />
+    <Resource Include="Images\Eclipse Aviation Eclipse 550.jpg" />
+    <Resource Include="Images\Gulfstream_G700-Floorplan.jpg" />
+    <Resource Include="Images\Gulfstream_G700.jpg" />
+    <Resource Include="Images\Gulfstream_G700_inside.jpg" />
+    <Resource Include="Images\Hintergrund_0.jpg" />
+    <Resource Include="Images\Hintergrund_1.jpg" />
+    <Resource Include="Images\Hintergrund_2.jpg" />
+    <Resource Include="Images\Hintergrund_3.png" />
+    <Resource Include="Images\Hintergrund_4.jpg" />
+    <Resource Include="Images\Hintergrund_5.jpg" />
+    <Resource Include="Images\Hintergrund_6.jpg" />
+    <Resource Include="Images\Kampfjet_Daten.png" />
+    <Resource Include="Images\Kampfjet_Motor.jpg" />
+    <Resource Include="Images\Lockheed_Martin_F-35_Lightning.jpg" />
+    <Resource Include="Images\PrivateJets_Hintergrund.jpg" />
+    <Resource Include="Images\PrivateJets_Hintergrund1.jpg" />
+    <Resource Include="Images\PrivateJets_Hintergrund3.png" />
+    <Resource Include="Images\PrivateJets_Hintergund2.jpg" />
+    <Resource Include="Images\Top-Arbeitgeber-1.jpg" />
+    <Resource Include="Images\wfk-Siegel-3000.jpg" />
+  </ItemGroup>
+
+</Project>

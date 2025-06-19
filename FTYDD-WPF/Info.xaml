@@ -1,0 +1,31 @@
+﻿<Window x:Class="FTYDD_WPF.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FTYDD_WPF"
+        mc:Ignorable="d"
+        Title="Info" Height="300" Width="500">
+    <Grid>
+
+        <StackPanel Margin="5">
+            <TextBlock TextWrapping="Wrap" FontSize="10" FontWeight="Normal" >1. Datenerfassung und -nutzung: <LineBreak></LineBreak>Erfassen Sie die Arten von 
+                       personenbezogenen Daten, die auf Ihrer Website erfasst werden, und wie diese Daten verwendet werden. Dies könnte 
+                       Informationen wie Name, E-Mail-Adresse, Zahlungsinformationen, IP-Adresse, Standortdaten usw. umfassen.<LineBreak></LineBreak>2. Cookies und 
+                       Tracking-Technologien: <LineBreak></LineBreak>Erfassen Sie, welche Arten von Cookies und anderen Tracking-Technologien auf Ihrer Website 
+                       verwendet werden, und wie diese verwendet werden, um das Benutzererlebnis zu verbessern oder Marketingzwecke zu 
+                       unterstützen. Geben Sie auch an, wie Benutzer Cookies ablehnen oder verwalten können.<LineBreak></LineBreak>3. Datenweitergabe: <LineBreak></LineBreak>Beschreiben Sie,
+                       ob und wie personenbezogene Daten an Dritte weitergegeben werden, einschließlich Dienstleistern, Partnern oder anderen 
+                       Unternehmen. Dies kann auch die Offenlegung von Daten aufgrund rechtlicher Anforderungen umfassen.<LineBreak></LineBreak>4. Datensicherheit: <LineBreak></LineBreak> 
+                       Erklären Sie, welche Maßnahmen zum Schutz der personenbezogenen Daten Ihrer Benutzer ergriffen werden, um unbefugten 
+                       Zugriff, Offenlegung, Änderung oder Zerstörung zu verhindern.</TextBlock>
+        </StackPanel>
+
+
+        <Button Margin="15,200,0,0" Click="Button_Click" Content="Yes" Width="50" Height="20" HorizontalAlignment="Left" ></Button>
+        <Button Margin="75,200,0,0" Click="Button_Click_1" Content="No" Width="50" Height="20" HorizontalAlignment="Left" ></Button>
+        <Label Content="Haben Sie noch weitere Fragen ?" Margin="160,220,0,0" FontSize="14" FontWeight="DemiBold"></Label>
+        
+
+    </Grid>
+</Window>

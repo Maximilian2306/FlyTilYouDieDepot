@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build-Ergebnisse
+bin/
+obj/
+GeneratedFiles/
+
+# ReSharper/JetBrains Rider
+.idea/
+*.DotSettings.user
+
+# Rider & VS Code
+.vscode/
+
+# Sonstiges
+*.log
+*.cache
+*.db
